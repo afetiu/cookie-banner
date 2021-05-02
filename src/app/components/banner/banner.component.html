@@ -1,0 +1,59 @@
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="staticBackdropLabel"> Can we store cookies? </h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="header-container">
+          <div class="banner-paragraph">
+            We and our partners use technologies, such as cookies, and process personal data, such as IP addresses and
+            cookie identifiers, to personalize ads and content based on your interests, measure the performance of ads
+            and
+            content, and derive insights about the audiences who saw ads and content.
+          </div>
+
+          <div class="banner-paragraph">
+            Click below to consent to the use of this technology and the processing of your personal data for these
+            purposes. You can change your mind and change your consent choices at any time by returning to this site.
+          </div>
+
+          <div class="banner-paragraph">
+            You can familiarize with our <span class="custom-link">Privacy Policy</span>
+          </div>
+
+          <div class="button-bar">
+            <div>
+              <button type="button" class="btn btn-success custom-button custom-primary-button" data-bs-dismiss="modal" 
+                (click)="acceptAll()">Accept
+                All</button>
+              <button type="button" data-bs-dismiss="modal"  class="btn btn-outline-secondary custom-button"  (click)="saveSettings()"> Save
+                Settings
+              </button>
+            </div>
+
+            <button type="button" class="btn btn-light customize-button" data-bs-toggle="collapse"
+              data-bs-target="#banner-body" (click)="bodyCollapsed = !bodyCollapsed"> Customize
+              <i class="bi" [ngClass]="{'bi-caret-up-fill': !bodyCollapsed, 'bi-caret-down-fill' : bodyCollapsed}"></i>
+            </button>
+          </div>
+        </div>
+        <div id="banner-body" class="collapse">
+          <div class="body-container">
+            <div class="accordion-container">
+              <div *ngIf="banner" class="accordion accordion-flush" id="accordionFlushExample">
+
+                <app-accordion-item *ngFor="let item of banner.accordian, let index = index " [item]="item"
+                  [index]="index">
+                </app-accordion-item>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

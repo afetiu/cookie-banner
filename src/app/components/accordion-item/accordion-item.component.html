@@ -1,0 +1,37 @@
+<div class="accordion-item">
+  <div class="accordion-header" id="flush-headingOne">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" [checked]="item.Enabled">
+    </div>
+    <a class="accordion-button collapsed btn" type="button" data-bs-toggle="collapse" href="#collapse{{index}}"
+      aria-expanded="false" aria-controls="flush-collapseOne">
+      {{item.CategoyHeading}}
+    </a>
+  </div>
+  <div id="collapse{{index}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+    data-bs-parent="#accordionFlushExample">
+    <div class="accordion-body">
+      {{item.CategoyText}}
+
+      <table class="table plugin-list">
+        <tr>
+          <th>Plugins</th>
+          <th>Block/Enable</th>
+        </tr>
+        <tr *ngFor="let plugin of item.PluginList">
+          <td>
+            {{plugin.ComplianceType}}
+          </td>
+          <td class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+              [(ngModel)]="plugin.BlockingEnabled">
+          </td>
+          <td>
+            <a class="custom-link" *ngIf="plugin.optOutExternalLink" [href]="plugin.optOutExternalLink"
+              target="_blank">Go to site</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

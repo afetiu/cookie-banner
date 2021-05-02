@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+ .banner-paragraph {
+  color: #565656;
+  padding: 10px;
+}
+
+.custom-link {
+  font-weight: 600;
+  color: #000;
+  text-decoration: underline;
+}
+
+.modal-dialog {
+  max-width: 650px;
+}
+
+.custom-primary-button {
+  background-color: #24B04B;
+  border-color: #24B04B;
+  color: #fff;
+}
+
+.custom-button {
+  margin: 10px;
+  padding: .5rem .75rem;
+  font-weight: 500;
+}
+
+.custom-secondary-button {
+  background-color: #fff;
+  border-color: #dadada;
+  color: #949494;
+}
+
+.modal-header {
+  border: none;
+  align-items: flex-start;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fff;
+
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+ 
+
+.form-check-input:checked {
+  background-color: #24b04b;
+  border-color: #24b04b;
+}
+
+.form-check-input:focus {
+  border-color: #24b04b;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #24b04b47;
+}
